@@ -168,22 +168,22 @@ public class Bot extends TelegramLongPollingBot {
         mySendMessage(message, "Напомнить что-нибудь еще?");
     }
 
-    private void handleCallback(CallbackQuery callbackQuery) {
-        Message message = callbackQuery.getMessage();
-        String[] data = callbackQuery.getData().split(":"); // в дате зашито action : parameter
-        String action = data[0];
-        int parameter = Integer.valueOf(data[1]);
-        System.out.println("sdffsf");
-
-        if (action.equals("BUTTONS_1")) {
-            switch (parameter) {
-                case (1) -> mySendMessage(message, "Вы нажали кнопку 1");
-                case (2) -> mySendMessage(message, "Вы нажали кнопку 2");
-                case (3) -> mySendMessage(message, "Вы нажали кнопку 3");
-                case (4) -> mySendMessage(message, "Вы нажали кнопку 4");
-            }
-        }
-    }
+//    private void handleCallback(CallbackQuery callbackQuery) {
+//        Message message = callbackQuery.getMessage();
+//        String[] data = callbackQuery.getData().split(":"); // в дате зашито action : parameter
+//        String action = data[0];
+//        int parameter = Integer.valueOf(data[1]);
+//        System.out.println("sdffsf");
+//
+//        if (action.equals("BUTTONS_1")) {
+//            switch (parameter) {
+//                case (1) -> mySendMessage(message, "Вы нажали кнопку 1");
+//                case (2) -> mySendMessage(message, "Вы нажали кнопку 2");
+//                case (3) -> mySendMessage(message, "Вы нажали кнопку 3");
+//                case (4) -> mySendMessage(message, "Вы нажали кнопку 4");
+//            }
+//        }
+//    }
 
     private void startingMessage(Message message) {
         mySendMessage(message, "Привет! Этот бот может напомнить тебе о чём-то важном.");
