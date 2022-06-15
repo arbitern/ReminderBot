@@ -40,7 +40,7 @@ public class Bot extends TelegramLongPollingBot {
     private void ping() {
             while (true) {
                 try {
-                    Thread.sleep(100000);
+                    Thread.sleep(10000);
                 } catch (InterruptedException ignored) {}
                 new PingTask().pingMe();
         }
