@@ -33,8 +33,17 @@ public class Bot extends TelegramLongPollingBot {
         telegramBotsApi.registerBot(bot); // чтоб зарегать бота
 
         bot.remindCheсker();
-
+        bot.ping();
 //        bot.mySendMessage();
+    }
+
+    private void ping() {
+            while (true) {
+                try {
+                    Thread.sleep(100000);
+                } catch (InterruptedException ignored) {}
+                new PingTask().pingMe();
+        }
     }
 
     @Override
